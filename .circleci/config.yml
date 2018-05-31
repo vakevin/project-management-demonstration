@@ -15,6 +15,9 @@ jobs:
       - run:
           command: |
             node ./node_modules/nightwatch/bin/runner.js
+      - run:
+          command: |
+            node_modules/karma/bin/karma start karma.conf.js --log-level debug --single-run
       - store_test_results:
           path: reports/
       - store_artifacts:
